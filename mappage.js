@@ -1,6 +1,5 @@
 var map;
 var findMe = {lat:-36.84,lng:174.7};
-var score = null;
 
 // Initialization of map
 function initMap() {
@@ -21,7 +20,6 @@ function initMap() {
 	map.addListener('bounds_changed', function() {
 		var bounds = map.getBounds()
 		console.log("Bounds: "+bounds);
-		if(score = 1) return;
 		doYouSeeIt()
 	});
 	//Adds a hint window
@@ -37,18 +35,16 @@ function initMap() {
 function doYouSeeIt() {
 	var bounds = map.getBounds();
 	var zoom = map.getZoom();
-	// Will repeat this message if you see Auckland but are not zoomed in enough
 	if (bounds.contains(findMe) && zoom < 8) {
 		console.log("---------It is in view---------");
 		console.log("--------------but--------------");
 		console.log("-------you gotta zoom in-------");
 	};
-	// Will repeat this message if you see Auckland and are zoomed in enough
 	if (bounds.contains(findMe) && zoom >= 8) {
 		console.log("*******************************");
 		console.log("---------You found it!---------");
 		console.log("*******************************");
 		var marker = new google.maps.Marker({position: findMe, map: map});
-		var score = 1;
+		findMe = {lat:41.60,lng:-88.07};
 	};
 }
