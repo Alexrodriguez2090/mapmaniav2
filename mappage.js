@@ -26,11 +26,12 @@ function initMap() {
 	map.addListener('zoom_changed', function() {
 		var zoom = map.getZoom();
 		console.log('Zoom: '+zoom);
-		document.getElementById("Hint").value = currentPlaceIndex;
+		document.getElementById("Hint").value = currentPlace.content;
+		document.getElementById("Score").value = zoom;
 	});
 	//Reports bounds whenever they change
 	map.addListener('bounds_changed', function() {
-		var bounds = map.getBounds()
+		var bounds = map.getBounds();
 		console.log("Bounds: "+bounds);
 		doYouSeeIt()
 	});
