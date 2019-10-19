@@ -1,0 +1,60 @@
+#hintid {
+	position:relative;
+	text-align:center;
+	border:1px solid black;
+	background-color:grey;
+	left:2.3%;
+	top:23%;
+	padding:2px;
+	font-size:20px;
+	height:130px;
+	width:350px;
+}
+#closerid {
+	position:absolute;
+	font-family:monospace;
+	text-align:center;
+	font-size:17px;
+	height:107px;
+	width:350px;
+}
+#statsid {
+	position:absolute;
+	text-align:left;
+	border:1px solid black;
+	background-color:grey;
+	left:23%;
+	top:14.5%;
+	padding:3px;
+	font-size:20px;
+	height:70px;
+	width:200px;
+}
+#zoomid {
+	position:absolute;
+	font-family:monospace;
+	font-size:25px;
+	left:28%;
+	bottom:62%;
+}
+#scoreid {
+	position:absolute;
+	font-family:monospace;
+	font-size:25px;
+	left:28%;
+	bottom:0%;
+}
+#mapdiv {
+	position: relative;
+	height:85%;
+	width:100%;
+}
+h1 {
+	text-align:center;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:#265B5F;
+}
