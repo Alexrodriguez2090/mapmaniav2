@@ -49,19 +49,16 @@
 	height:85%;
 	width:100%;
 }
-#inst {
-	position:absolute;
-	top:2%;
-	left:6.5%;
-	font-size:40px;
+#cheatinst {
+	color:red;
 }
 h1 {
 	text-align:center;
 }
 html, body {
-    height:100%;
-    margin:0;
-    padding-left:0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     background-color:#265B5F;
 }
 button {
@@ -72,4 +69,7 @@ button {
 	right:0%;
 	width:30px;
 	height:30px;
+}
+p {
+	font-size:30px;
 }

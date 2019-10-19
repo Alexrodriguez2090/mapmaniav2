@@ -94,3 +94,16 @@ function doYouSeeIt() {
 		document.getElementById("closerid").innerHTML = "<hr />-----------It is not-----------<br />------------in view------------<br />-------check hints above-------";
 	};
 }
+//Cheat code at top right of page
+function cheatCode() {
+	if (currentPlace.score == 80) {
+		document.getElementById("scoreid").innerHTML = currentPlace.score;
+		document.getElementById("hintid").innerHTML = currentPlace.hint + "<div id='closerid'></div>";
+		document.getElementById("closerid").innerHTML = '<iframe width="350" height="107" src="https://www.youtube.com/embed/1Bix44C1EzY?autoplay=1"></iframe>';
+		return;
+	}
+	var marker = new google.maps.Marker({position: currentPlace.coordinates, map: map});
+	currentPlaceIndex = currentPlaceIndex - 1;
+	currentPlace = findMe[currentPlaceIndex];
+	cheatCode()
+}
